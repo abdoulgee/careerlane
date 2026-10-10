@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#080a09" />
+<meta name="description" content="Explore remote and flexible opportunities on Career Lane." />
+<title>Career Lane — Find Your Next Opportunity</title>
+<style>
+:root{--bg:#080a09;--panel:#101311;--panel2:#141815;--line:#252c27;--text:#f6f8f6;--muted:#9ba49d;--green:#b5f36b;--green2:#8bd943;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5}button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{height:78px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;position:sticky;top:0;z-index:20;background:rgba(8,10,9,.86);backdrop-filter:blur(18px)}.nav{display:flex;align-items:center;justify-content:space-between;width:100%}.brand{display:flex;align-items:center;gap:11px;font-size:20px;font-weight:800;letter-spacing:-.7px}.logo{width:34px;height:34px;border-radius:11px;background:var(--green);color:#0b1008;display:grid;place-items:center;font-size:18px;font-weight:950;box-shadow:0 0 26px #b5f32622}.navlinks{display:flex;align-items:center;gap:32px;color:#b8c0ba;font-size:13px;font-weight:650}.navlinks a:hover{color:var(--green)}.nav-cta{padding:11px 17px;border:1px solid #333b35;border-radius:12px;color:#fff}.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:11px;padding:8px 11px;font-size:20px}
+.hero{padding:74px 0 38px;text-align:center;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;z-index:-1;width:520px;height:360px;top:-190px;left:50%;transform:translateX(-50%);background:#9ce84b12;filter:blur(65px);border-radius:50%}.step{display:inline-flex;align-items:center;gap:9px;border:1px solid #34442b;background:#11180e;color:var(--green);border-radius:100px;padding:8px 13px;font-size:10px;letter-spacing:1.6px;font-weight:850}.step i{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-4px;max-width:800px;margin:24px auto 18px;font-weight:850}.hero p{font-size:17px;color:var(--muted);margin:0 auto;max-width:520px}.benefits{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin:29px 0 0;color:#d3d9d4;font-size:10px;font-weight:800;letter-spacing:1px}.benefits span{display:flex;align-items:center;gap:7px}.check{color:var(--green);font-size:15px}
+.section{padding:34px 0 54px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:19px}.eyebrow{font-size:10px;color:var(--green);font-weight:850;letter-spacing:1.6px;margin-bottom:7px}.section h2{font-size:clamp(25px,4vw,34px);letter-spacing:-1.3px;margin:0}.subtext{font-size:13px;color:var(--muted);margin:7px 0 0}.count{font-size:11px;color:#aab3ac;border:1px solid var(--line);border-radius:100px;padding:8px 11px;white-space:nowrap}
+.countries{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0 43px}.country{display:flex;align-items:center;gap:13px;text-align:left;padding:17px 18px;background:var(--panel);border:1px solid var(--line);border-radius:17px;color:var(--text);transition:transform .22s,border-color .22s,box-shadow .22s,background .22s}.country:hover{transform:translateY(-2px);border-color:#4b5a48}.country.active{border-color:var(--green);background:#131b10;box-shadow:0 0 0 1px #b5f3331a,0 8px 28px #9de94d0b}.flag{font-size:26px}.country strong{display:block;font-size:14px}.country small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.radio{margin-left:auto;width:16px;height:16px;border:1px solid #4b554d;border-radius:50%;display:grid;place-items:center;flex-shrink:0}.active .radio{border-color:var(--green)}.active .radio:after{content:"";width:8px;height:8px;background:var(--green);border-radius:50%}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{position:relative;display:flex;flex-direction:column;padding:20px;background:linear-gradient(150deg,#131714,#0d100e 75%);border:1px solid #2a332b;border-radius:22px;min-height:390px;transition:transform .25s,border-color .25s;animation:rise .4s both}.card:hover{transform:translateY(-4px);border-color:#728e5a}.card.featured{border-color:#7ea94d;box-shadow:inset 0 0 0 1px #b5f3260c}.card-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#d6dcd7;font-weight:700}.live{display:flex;align-items:center;gap:6px;color:var(--green);font-size:10px;font-weight:850;letter-spacing:.7px}.dot{display:inline-block;width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 10px #b5f36b88}.badge{display:inline-block;background:#b5f36b;color:#10160b;padding:5px 8px;border-radius:6px;font-size:9px;font-weight:950;letter-spacing:1px;margin-top:19px;align-self:flex-start}.brandvisual{height:74px;display:flex;align-items:center;gap:12px;margin:12px 0 5px}.brand-icon{height:54px;width:54px;border-radius:16px;display:grid;place-items:center;background:#202620;border:1px solid #343c34;font-weight:900;font-size:25px;letter-spacing:-2px}.brand-icon.netflix{color:#ff514f;font-family:Georgia,serif;font-size:34px}.brand-icon.tesla{color:#f3f3f3;font-size:25px}.brand-icon.tiktok{background:#17191c;color:#fff;font-size:25px;text-shadow:-2px 0 #25f4ee,2px 0 #fe2c55}.brand-name{font-size:10px;color:#89948c;letter-spacing:1px;font-weight:750}.card h3{font-size:22px;letter-spacing:-.7px;margin:8px 0 3px}.category{font-size:12px;color:var(--muted);margin:0}.divider{height:1px;background:#29302a;margin:20px 0 16px}.details{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.detail-label{font-size:9px;color:#808b82;font-weight:800;letter-spacing:1px;margin-bottom:5px}.detail-value{font-size:12px;font-weight:650}.status{display:flex;align-items:center;gap:5px;color:var(--green)}.apply{display:flex;justify-content:center;align-items:center;gap:12px;background:#f6f8f6;color:#0b0e0c;border:0;border-radius:12px;padding:15px 12px;margin-top:auto;font-size:11px;font-weight:950;letter-spacing:1px;transition:background .2s,transform .2s}.apply:hover{background:var(--green);transform:translateY(-1px)}.apply span{font-size:17px}
+.empty{padding:35px;border:1px dashed #303830;border-radius:18px;color:var(--muted);text-align:center;grid-column:1/-1}
+.trust-note{border:1px solid var(--line);background:#0d100e;border-radius:16px;padding:15px 17px;color:#a6afa8;font-size:11px;line-height:1.7;margin-top:22px}.trust-note strong{color:#e3e8e3}
+.how{padding:60px 0;border-top:1px solid #1c211d}.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:25px}.how-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:23px}.number{font-size:11px;color:var(--green);font-weight:900;letter-spacing:1px}.how-card h3{font-size:16px;margin:14px 0 7px}.how-card p{font-size:12px;color:var(--muted);margin:0;line-height:1.8}
+.faq{padding:52px 0 70px;border-top:1px solid #1c211d}.faq-list{margin-top:22px;display:grid;gap:10px}.faq details{border:1px solid var(--line);border-radius:14px;background:#0e110f;padding:17px 18px}.faq summary{cursor:pointer;font-size:13px;font-weight:750;list-style:none;display:flex;justify-content:space-between;gap:12px}.faq summary:after{content:"+";color:var(--green);font-size:18px;line-height:1}.faq details[open] summary:after{content:"−"}.faq details p{color:var(--muted);font-size:12px;line-height:1.8;margin:13px 0 0}
+footer{border-top:1px solid #1d231e;padding:25px 0 35px;color:#7e8981;font-size:11px}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}.footer-brand{color:#e5eae5;font-weight:800}
+.modal-backdrop{position:fixed;inset:0;z-index:50;background:#000b;backdrop-filter:blur(9px);display:none;align-items:center;justify-content:center;padding:18px}.modal-backdrop.open{display:flex;animation:fade .2s}.modal{width:min(520px,100%);max-height:90vh;overflow:auto;background:#101411;border:1px solid #354034;border-radius:24px;padding:25px;box-shadow:0 24px 100px #0009;animation:rise .25s}.modal-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.close{background:#1c231d;border:1px solid #333c34;border-radius:10px;color:#fff;width:36px;height:36px;font-size:21px}.modal h2{font-size:30px;letter-spacing:-1px;margin:12px 0 5px}.modal .modal-category{color:var(--muted);font-size:13px}.modal-details{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:22px 0}.modal-detail{background:#171c18;border:1px solid #283029;border-radius:12px;padding:13px}.modal-detail span{display:block;color:#879188;font-size:9px;font-weight:800;letter-spacing:1px;margin-bottom:6px}.modal-detail strong{font-size:13px}.modal-note{color:#aab4ac;font-size:12px;line-height:1.8}.modal .apply{width:100%;margin-top:20px}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#e9f8dc;color:#17210f;padding:12px 17px;border-radius:12px;font-size:12px;font-weight:750;box-shadow:0 10px 30px #0005;opacity:0;pointer-events:none;transition:.25s;z-index:60;width:max-content;max-width:calc(100% - 30px)}.toast.show{opacity:1;transform:translate(-50%,0)}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes fade{from{opacity:0}to{opacity:1}}
+@media(max-width:800px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card{min-height:380px}.navlinks{gap:18px}.hero{padding-top:62px}}
+@media(max-width:600px){.wrap{width:min(100% - 30px,500px)}header{height:67px}.brand{font-size:18px}.navlinks{display:none;position:absolute;top:66px;left:15px;right:15px;background:#111511;border:1px solid var(--line);border-radius:15px;padding:16px;flex-direction:column;align-items:stretch;gap:17px}.navlinks.open{display:flex}.navlinks .nav-cta{text-align:center}.menu{display:block}.hero{padding:53px 0 25px}h1{letter-spacing:-2.5px;font-size:clamp(40px,11vw,57px)}.hero p{font-size:14px;max-width:340px}.benefits{gap:12px 16px;font-size:9px}.section{padding:28px 0 42px}.section-head{align-items:start}.section h2{font-size:27px}.countries{gap:8px;margin:18px 0 32px}.country{padding:14px 10px;gap:8px;flex-direction:column;align-items:flex-start;position:relative;min-height:112px}.country strong{font-size:12px}.country small{font-size:10px}.flag{font-size:24px}.radio{position:absolute;right:10px;top:12px;width:13px;height:13px}.active .radio:after{width:6px;height:6px}.cards{grid-template-columns:1fr;gap:13px}.card{min-height:365px;padding:19px}.brandvisual{height:65px}.card h3{font-size:23px}.details{max-width:390px}.how{padding:43px 0}.how-grid{grid-template-columns:1fr}.how-card{padding:20px}.faq{padding:40px 0 50px}.modal{padding:20px}.modal h2{font-size:26px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#" aria-label="Career Lane home"><span class="logo">↗</span><span>Career Lane</span></a>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#opportunities">Opportunities</a><a href="#how-it-works">How It Works</a><a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#opportunities">Explore roles ↗</a>
+    </nav>
+    <button class="menu" id="menuButton" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="step"><i></i> STEP 01 — SELECT COUNTRY</div>
+    <h1>Where do you want<br/>to <span style="color:var(--green)">work?</span></h1>
+    <p>Choose your country to view available opportunities.</p>
+    <div class="benefits"><span><b class="check">✓</b> REMOTE OPPORTUNITIES</span><span><b class="check">✓</b> FLEXIBLE HOURS</span><span><b class="check">✓</b> SIMPLE APPLICATION</span></div>
+  </section>
+
+  <section class="section wrap" id="opportunities">
+    <div class="section-head"><div><div class="eyebrow">YOUR NEXT MOVE STARTS HERE</div><h2>Choose your location</h2><p class="subtext">Browse opportunities available in your country.</p></div><div class="count" id="resultCount">03 opportunities</div></div>
+    <div class="countries" role="group" aria-label="Select country">
+      <button class="country active" data-country="US" aria-pressed="true"><span class="flag">🇺🇸</span><span><strong>United States</strong><small>Explore opportunities</small></span><span class="radio"></span></button>
+      <button class="country" data-country="UK" aria-pressed="false"><span class="flag">🇬🇧</span><span><strong>United Kingdom</strong><small>Explore opportunities</small></span><span class="radio"></span></button>
+      <button class="country" data-country="CA" aria-pressed="false"><span class="flag">🇨🇦</span><span><strong>Canada</strong><small>Explore opportunities</small></span><span class="radio"></span></button>
+    </div>
+    <div class="section-head"><div><div class="eyebrow">CURATED OPPORTUNITIES</div><h2 id="listingTitle">Available in the US</h2><p class="subtext">Review each listing before continuing.</p></div><div class="count">● Updated listings</div></div>
+    <div class="cards" id="cards" aria-live="polite"></div>
+    <div class="trust-note"><strong>Independent platform notice:</strong> Career Lane shares opportunity information and is not the official recruitment website of Netflix, Tesla, or TikTok. Career Lane does not employ applicants. Company names are used only to identify the subject of each listing. Availability and hiring status should be independently verified.</div>
+  </section>
+
+  <section class="how" id="how-it-works"><div class="wrap"><div class="eyebrow">A SIMPLE THREE-STEP FLOW</div><h2>How it works</h2><p class="subtext">Find a listing that fits, understand the details, then decide what to do next.</p><div class="how-grid">
+    <article class="how-card"><div class="number">01 / SELECT</div><h3>Choose your country</h3><p>Pick your location to see the opportunities listed for that country.</p></article>
+    <article class="how-card"><div class="number">02 / REVIEW</div><h3>Explore the details</h3><p>Check the category, work type, hours and listing information before continuing.</p></article>
+    <article class="how-card"><div class="number">03 / DECIDE</div><h3>Continue when ready</h3><p>Review the details, then continue to the opportunity destination.</p></article>
+  </div></div></section>
+
+  <section class="faq" id="faq"><div class="wrap"><div class="eyebrow">GOOD TO KNOW</div><h2>Frequently asked questions</h2><div class="faq-list">
+    <details><summary>Is Career Lane an official company recruitment website?</summary><p>No. Career Lane is an independent opportunity-information platform. It is not the official recruitment website of Netflix, Tesla, or TikTok.</p></details>
+    <details><summary>Does Career Lane employ applicants?</summary><p>No. Career Lane does not directly employ applicants. Each listing is informational, and any future application process would be handled through a verified destination.</p></details>
+    <details><summary>Why can’t I apply yet?</summary><p>The buttons open opportunity details first. The continue button then opens the destination configured for that listing in a new tab.</p></details>
+    <details><summary>Are all opportunities available in every country?</summary><p>No. Tesla Reviewer is listed for the United States, United Kingdom and Canada. Netflix Reviewer and TikTok Reviewer are listed for the United States only.</p></details>
+  </div></div></section>
+</main>
+
+<footer><div class="wrap footer-row"><div class="brand footer-brand"><span class="logo">↗</span><span>Career Lane</span></div><span>Independent opportunity information · Not an employer</span><span>© <span id="year"></span> Career Lane</span></div></footer>
+
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-head"><div class="step"><i></i> STEP 02 — OPPORTUNITY DETAILS</div><button class="close" id="closeModal" aria-label="Close details">×</button></div>
+    <div class="brandvisual" style="margin-top:18px"><div class="brand-icon" id="modalIcon">T</div><div><div class="brand-name" id="modalBrand">MYJOBSCORNER</div><div class="live" style="margin-top:7px"><span class="dot"></span> LISTING STATUS: HIRING</div></div></div>
+    <h2 id="modalTitle">Tesla Reviewer</h2><p class="modal-category" id="modalCategory">Automotive • Remote</p>
+    <div class="modal-details">
+      <div class="modal-detail"><span>COUNTRY</span><strong id="modalCountry">🇺🇸 United States</strong></div>
+      <div class="modal-detail"><span>ROLE</span><strong id="modalRole">Remote</strong></div>
+      <div class="modal-detail"><span>WORK TYPE</span><strong>Remote</strong></div>
+      <div class="modal-detail"><span>HOURS</span><strong>Flexible</strong></div>
+      <div class="modal-detail"><span>STATUS</span><strong style="color:var(--green)">● Hiring</strong></div>
+      <div class="modal-detail"><span>LISTING</span><strong>MyJobsCorner</strong></div>
+    </div>
+    <p class="modal-note">Review the opportunity details before continuing. Career Lane is an independent information platform, not the employer or an official company recruitment website.</p>
+    <button class="apply" id="continueButton">CONTINUE TO OPPORTUNITY <span>→</span></button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite">Application details coming soon.</div>
+
+<script>
+const countries = {
+  US:{name:"United States",flag:"🇺🇸",title:"Available in the US"},
+  UK:{name:"United Kingdom",flag:"🇬🇧",title:"Available in the UK"},
+  CA:{name:"Canada",flag:"🇨🇦",title:"Available in Canada"}
+};
+const offers = [
+  {id:"netflix",brand:"Netflix",listing:"MyJobsCorner – Netflix",title:"Netflix Reviewer",category:"Streaming",type:"Remote",countries:["US"],icon:"N",iconClass:"netflix",destination:"https://linkthem.net/aff_c?offer_id=973&aff_id=195151"},
+  {id:"tesla",brand:"Tesla",listing:"MyJobsCorner – Tesla",title:"Tesla Reviewer",category:"Automotive",type:"Remote",countries:["US","UK","CA"],icon:"T",iconClass:"tesla",destination:"https://giftclick.org/aff_c?offer_id=1363&aff_id=195151"},
+  {id:"tiktok",brand:"TikTok",listing:"MyJobsCorner – TikTok",title:"TikTok Reviewer",category:"Social Media",type:"Remote",countries:["US"],icon:"♪",iconClass:"tiktok",destination:"https://giftclick.org/aff_c?offer_id=4087&aff_id=195151"}
+];
+let selectedCountry = "US";
+let selectedOffer = null;
+const cardsEl = document.getElementById("cards");
+const countEl = document.getElementById("resultCount");
+const listingTitle = document.getElementById("listingTitle");
+function renderCards(){
+  const current = offers.filter(o=>o.countries.includes(selectedCountry));
+  countEl.textContent = `${String(current.length).padStart(2,"0")} opportunit${current.length===1?"y":"ies"}`;
+  listingTitle.textContent = countries[selectedCountry].title;
+  cardsEl.innerHTML = current.map((o,i)=>`
+    <article class="card featured" style="animation-delay:${i*70}ms">
+      <div class="card-top"><span>${countries[selectedCountry].flag} ${countries[selectedCountry].name}</span><span class="live"><i class="dot"></i> LIVE</span></div>
+      <span class="badge">FEATURED</span>
+      <div class="brandvisual"><div class="brand-icon ${o.iconClass}" aria-hidden="true">${o.icon}</div><div><div class="brand-name">MYJOBSCORNER</div><div style="font-size:12px;color:#e1e6e1;font-weight:750;margin-top:4px">${o.brand}</div></div></div>
+      <h3>${o.title}</h3><p class="category">${o.category} · Remote</p>
+      <div class="divider"></div>
+      <div class="details"><div><div class="detail-label">ROLE</div><div class="detail-value">Remote</div></div><div><div class="detail-label">HOURS</div><div class="detail-value">Flexible</div></div><div><div class="detail-label">STATUS</div><div class="detail-value status"><i class="dot"></i> Hiring</div></div></div>
+      <button class="apply" data-offer="${o.id}" style="margin-top:25px">APPLY NOW <span>→</span></button>
+    </article>`).join("");
+  cardsEl.querySelectorAll("[data-offer]").forEach(btn=>btn.addEventListener("click",()=>openDetails(btn.dataset.offer)));
+}
+document.querySelectorAll(".country").forEach(btn=>btn.addEventListener("click",()=>{
+  selectedCountry=btn.dataset.country;
+  document.querySelectorAll(".country").forEach(b=>{const active=b.dataset.country===selectedCountry;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active));});
+  renderCards();
+}));
+const backdrop=document.getElementById("modalBackdrop");
+function openDetails(id){
+  selectedOffer=offers.find(o=>o.id===id);
+  if(!selectedOffer || !selectedOffer.countries.includes(selectedCountry))return;
+  const o=selectedOffer;
+  document.getElementById("modalIcon").textContent=o.icon;
+  document.getElementById("modalIcon").className="brand-icon "+o.iconClass;
+  document.getElementById("modalBrand").textContent=o.listing.toUpperCase();
+  document.getElementById("modalTitle").textContent=o.title;
+  document.getElementById("modalCategory").textContent=o.category+" · Remote";
+  document.getElementById("modalCountry").textContent=countries[selectedCountry].flag+" "+countries[selectedCountry].name;
+  document.getElementById("modalRole").textContent=o.title;
+  backdrop.classList.add("open");
+  document.body.style.overflow="hidden";
+  document.getElementById("closeModal").focus();
+}
+function closeDetails(){backdrop.classList.remove("open");document.body.style.overflow="";}
+document.getElementById("closeModal").addEventListener("click",closeDetails);
+backdrop.addEventListener("click",e=>{if(e.target===backdrop)closeDetails()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDetails()});
+let toastTimer;
+function showToast(){const toast=document.getElementById("toast");toast.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove("show"),3000)}
+document.getElementById("continueButton").addEventListener("click",()=>{
+  if(selectedOffer && selectedOffer.destination){
+    window.open(selectedOffer.destination,"_blank","noopener,noreferrer");
+  } else {
+    showToast();
+  }
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+const menuButton=document.getElementById("menuButton"), navlinks=document.getElementById("navlinks");
+menuButton.addEventListener("click",()=>{const open=navlinks.classList.toggle("open");menuButton.setAttribute("aria-expanded",String(open));menuButton.textContent=open?"×":"☰"});
+navlinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{navlinks.classList.remove("open");menuButton.setAttribute("aria-expanded","false");menuButton.textContent="☰"}));
+renderCards();
+</script>
+</body>
+</html>
